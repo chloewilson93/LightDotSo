@@ -23,7 +23,7 @@ jobs:
         run: |
           sleep 30s
       - name: Wait Docker
-        uses: lewagon/wait-on-check-action@v1.3.4
+        uses: lewagon/wait-on-check-action@v1.4.0
         continue-on-error: true
         with:
           ref: ${{ github.ref }}
@@ -49,7 +49,7 @@ jobs:
       contents: write
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Node Install
         uses: wallet-rs/wallet-rs/.github/actions/node-install@main
       - name: Thunder Client Check

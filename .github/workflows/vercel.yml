@@ -53,13 +53,13 @@ jobs:
     timeout-minutes: 90
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Node Install
         uses: wallet-rs/wallet-rs/.github/actions/node-install@main
       - name: Install Doppler
         uses: dopplerhq/cli-action@v3
       - name: Doppler Setup 
-        uses: dopplerhq/secrets-fetch-action@v1.2.0
+        uses: dopplerhq/secrets-fetch-action@v1.3.0
         id: doppler
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
@@ -103,7 +103,7 @@ jobs:
           VERCEL_ENV: preview
           NEXT_PUBLIC_VERCEL_ENV: preview
       - name: Add Preview URL to PR
-        uses: marocchino/sticky-pull-request-comment@v2.9.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.4
         with:
           append: true
           header: 'vercel-preview-url'
@@ -136,7 +136,7 @@ jobs:
           matrix.app != 'storybook' &&
           github.event.number != null
         name: Download Bundle Stats
-        uses: dawidd6/action-download-artifact@v7
+        uses: dawidd6/action-download-artifact@v11
         with:
           name: bundle-${{ matrix.app }}
           workflow: vercel.yml
@@ -166,7 +166,7 @@ jobs:
           matrix.app != 'storybook' &&
           github.event.number != null
         name: Add Comment to PR
-        uses: marocchino/sticky-pull-request-comment@v2.9.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.4
         with:
           header: 'bundle-analysis-${{ matrix.app }}'
           message: ${{ steps.comment-body.outputs.body }}
@@ -185,13 +185,13 @@ jobs:
     timeout-minutes: 90
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Node Install
         uses: wallet-rs/wallet-rs/.github/actions/node-install@main
       - name: Install Doppler
         uses: dopplerhq/cli-action@v3
       - name: Doppler Setup 
-        uses: dopplerhq/secrets-fetch-action@v1.2.0
+        uses: dopplerhq/secrets-fetch-action@v1.3.0
         id: doppler
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}

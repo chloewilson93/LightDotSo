@@ -21,7 +21,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Diff Metrics
         uses: autometrics-dev/diff-metrics@v2
         with:

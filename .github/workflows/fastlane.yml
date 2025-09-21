@@ -41,7 +41,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Install Rust Toolchain
         uses: mkroening/rust-toolchain-toml@main
       - name: Install Ruby Bundler
@@ -90,7 +90,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Rust Install
         uses: wallet-rs/wallet-rs/.github/actions/rust-install@main
       - name: Install Ruby Bundler
