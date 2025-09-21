@@ -33,8 +33,8 @@
   lightdotso-rpc = { workspace = true }
   lightdotso-simulator = { workspace = true }
   lightdotso-tracing = { workspace = true }
-  num_cpus = "1.13.0"
-  ratatui = { version = "0.28.1", features = ["all-widgets"] }
+  num_cpus = "1.17.0"
+  ratatui = { version = "0.29.0", features = ["all-widgets"] }
   redb = { workspace = true }
   tokio = { workspace = true, features = ["full"] }
   tower = { workspace = true, features = [

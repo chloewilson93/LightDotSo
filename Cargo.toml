@@ -75,22 +75,22 @@
 
   [workspace.dependencies]
     alloy = { version = "0.5.2", features = ["full", "provider-debug-api"] }
-    anyhow = "1.0.90"
+    anyhow = "1.0.100"
     async-stream = "0.3.5"
-    async-trait = "0.1.73"
+    async-trait = "0.1.89"
     autometrics = { version = "2.0.0", features = [
       "opentelemetry",
       "prometheus-exporter",
     ], default-features = false }
     axum = { version = "0.7.5", features = ["macros", "ws"] }
-    backon = "1.2.0"
+    backon = "1.5.2"
     base64 = "0.22.1"
     byteorder = "1.4.3"
-    chrono = { version = "0.4.38", default-features = false, features = [
+    chrono = { version = "0.4.42", default-features = false, features = [
       "clock",
       "std",
     ] }
-    clap = { version = "4.5.20", features = ["derive", "env"] }
+    clap = { version = "4.5.48", features = ["derive", "env"] }
     dotenvy = "0.15.7"
     enumset = "1.1.2"
     eyre = "0.6.8"
@@ -99,16 +99,16 @@
     foundry-evm-traces = { git = "https://github.com/foundry-rs/foundry", rev = "57bcac09ef36e14655fc62691a021f588defd6fb", package = "foundry-evm-traces" }
     futures = "0.3.28"
     futures-util = "0.3.28"
-    http = "1.1.0"
+    http = "1.3.1"
     http-body = "1.0.1"
-    http-body-util = "0.1.2"
-    hyper = { version = "1.5.0", features = ["full"] }
+    http-body-util = "0.1.3"
+    hyper = { version = "1.7.0", features = ["full"] }
     hyper-rustls = "0.27.3"
-    hyper-util = { version = "0.1.9", default-features = false, features = [
+    hyper-util = { version = "0.1.17", default-features = false, features = [
       "client-legacy",
       "tokio",
     ] }
-    insta = "1.17"
+    insta = "1.43"
     itertools = "0.13.0"
     js-sys = "0.3.72"
     jsonrpsee = { version = "0.24.7", features = [
@@ -171,8 +171,8 @@
     opentelemetry-prometheus = "0.17.0"
     opentelemetry-semantic-conventions = "0.26.0"
     opentelemetry_sdk = { version = "0.26.0", features = ["metrics"] }
-    once_cell = "1.8.0"
-    pin-project-lite = "0.2.13"
+    once_cell = "1.21.3"
+    pin-project-lite = "0.2.16"
     prettyplease = "0.2.24"
     prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.11", features = [
       "migrations",
@@ -189,7 +189,7 @@
     prometheus = "0.13.3"
     rand = "0.8.5"
     rdkafka = { version = "0.36.2", features = ["sasl", "ssl"] }
-    redb = "2.1.2"
+    redb = "2.6.3"
     regress = "0.10.1"
     reqwest = { version = "0.12.8", features = [
       "blocking",
@@ -207,8 +207,8 @@
       "std",
       "tls12",
     ] }
-    serde = "1.0.183"
-    serde_json = "1.0.113"
+    serde = "1.0.226"
+    serde_json = "1.0.145"
     serde_yaml = "0.9"
     spki = "0.7.2"
     sqlx = { version = "0.6.3", default-features = false, features = [
@@ -222,10 +222,10 @@
     strum_macros = "0.26.3"
     syn = "2.0.82"
     tauri = "2.0.5"
-    tauri-build = { version = "2.0.1" }
-    thiserror = "1.0.40"
-    time = "0.3.36"
-    tokio = { version = "1.39.3", features = ["full"] }
+    tauri-build = { version = "2.0.2" }
+    thiserror = "2.0.16"
+    time = "0.3.44"
+    tokio = { version = "1.47.1", features = ["full"] }
     tonic = { version = "0.12.2", features = ["tls", "tls-roots"] }
     tower = "0.5.1"
     tower-cookies = "0.10.0"
@@ -242,13 +242,13 @@
     ] }
     tower-sessions = "0.13.0"
     tower-sessions-core = "0.13.0"
-    tracing = "0.1.37"
+    tracing = "0.1.41"
     tracing-test = "0.2.4"
     uniffi = "0.28.1"
     uniffi_macros = "0.28.1"
     uniffi_build = { version = "0.28.1", features = ["builtin-bindgen"] }
     uuid = { version = "1.11.0", features = ["v4", "fast-rng", "serde"] }
-    url = { version = "2.5.2", default-features = false }
+    url = { version = "2.5.4", default-features = false }
 
 [patch.crates-io]
   #   alloy-consensus = { git = "https://github.com/alloy-rs/alloy", rev = "5354223a22f9eca76df6697aefa165d8c48006cc" }
