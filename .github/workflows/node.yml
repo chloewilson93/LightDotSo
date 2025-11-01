@@ -24,7 +24,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Node Install
         uses: wallet-rs/wallet-rs/.github/actions/node-install@main
       - name: Install Foundry
@@ -41,7 +41,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Node Install
         uses: wallet-rs/wallet-rs/.github/actions/node-install@main
       - name: Node Lint
@@ -53,7 +53,7 @@ jobs:
           pnpm turbo run fix
       - if: failure() && github.event_name == 'pull_request'
         name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: auto fix commit"
           commit_user_name: LightDotSoBot
@@ -65,7 +65,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         continue-on-error: true
         with:
           submodules: recursive
