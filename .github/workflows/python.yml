@@ -19,7 +19,7 @@ jobs:
       contents: read
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Rye Install
         uses: eifinger/setup-rye@v4
       - name: Install dependencies

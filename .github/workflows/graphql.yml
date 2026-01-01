@@ -19,7 +19,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Fetch Head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Node Install
         uses: wallet-rs/wallet-rs/.github/actions/node-install@main
       - if: github.event_name == 'workflow_dispatch'
@@ -38,7 +38,7 @@ jobs:
         run: |
           pnpm run fix
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.BOT_TOKEN }}
           commit-message: "chore: Update GraphQL Schema"
