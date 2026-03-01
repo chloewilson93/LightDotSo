@@ -11,7 +11,7 @@
 [dependencies]
   alloy = { workspace = true }
   cynic = { version = "3.8.0", features = ["http-reqwest-blocking"] }
-  cynic-codegen = { version = "3.8.0" }
+  cynic-codegen = { version = "3.13.1" }
   eyre = { workspace = true }
   lazy_static = { workspace = true }
   lightdotso-common = { workspace = true }
@@ -26,5 +26,5 @@
   insta = { workspace = true }
 
 [build-dependencies]
-  cynic-codegen = { version = "3.8.0" }
+  cynic-codegen = { version = "3.13.1" }
   eyre = { workspace = true }
